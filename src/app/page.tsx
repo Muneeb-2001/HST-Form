@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef, useState } from "react";
 import {
@@ -84,22 +84,22 @@ export default function Home() {
 
       <div className="relative z-10 flex h-full items-center justify-center">
         <section className="w-full max-w-lg">
-          <div className="rounded-[22px] border border-[#dfe8f3] bg-white px-5 py-6 shadow-[0_18px_55px_rgba(13,55,105,0.12)] sm:rounded-[26px] sm:px-7 sm:py-4">
+          <div className="rounded-[22px] border border-[#dfe8f3] bg-white px-5 py-6 shadow-[0_18px_55px_rgba(13,55,105,0.12)] sm:rounded-[26px] sm:px-7 sm:py-3">
 
             {!submitted ? (
               <>
-                <div className="mb-3">
+                <div className="mb-2">
                   <h1 className="text-3xl font-extrabold tracking-tight text-[#124559]">
                     Submit Your Application
                   </h1>
 
-                  <p className="mt-1 text-xs leading-5 text-[#697991] sm:text-sm">
+                  <p className="mt-0.5 text-xs leading-5 text-[#697991] sm:text-sm">
                     Fill in your details and upload your latest CV or resume
                     to get started.
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-2.5">
+                <form onSubmit={handleSubmit} className="space-y-1.5">
 
                   <div>
                     <label className="mb-1.5 block text-xs font-bold text-[#152541] sm:text-sm">
