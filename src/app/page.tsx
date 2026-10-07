@@ -89,11 +89,7 @@ export default function Home() {
             {!submitted ? (
               <>
                 <div className="mb-3">
-                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-[#e8f1ff] text-[#124559]">
-                    <FileText size={16} />
-                  </div>
-
-                  <h1 className="text-[26px] font-extrabold leading-tight tracking-tight sm:text-[28px]">
+                  <h1 className="text-3xl font-extrabold tracking-tight text-[#124559]">
                     Submit Your Application
                   </h1>
 
@@ -290,14 +286,6 @@ export default function Home() {
     />
   )}
 </button>
-
-                  <div className="flex items-center justify-center gap-1.5 pt-0 text-center text-[10px] leading-4 text-[#8794a8] sm:text-[11px]">
-                    <ShieldCheck size={13} className="shrink-0" />
-                    <span>
-                      Your information is secure and used only for recruitment.
-                    </span>
-                  </div>
-
                 </form>
               </>
             ) : (
