@@ -52,7 +52,7 @@ export default function Home() {
       formData.append("cv", file);
 
       const response = await fetch(
-        "/api/submit",
+        "https://n8n.domingogarcia.info/webhook/a91cd0c0-7a4b-498a-b186-a7785f52eff1",
         {
           method: "POST",
           body: formData,
@@ -75,7 +75,7 @@ export default function Home() {
   };
 
   return (
-    <main className="h-screen overflow-hidden bg-[#f4f8f9] px-4 py-5 text-[#124559] sm:px-6 sm:py-3">
+    <main className="h-screen overflow-hidden bg-[#f5f8fd] px-4 py-5 text-[#0b1f3a] sm:px-6 sm:py-3">
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute -left-36 -top-36 h-72 w-72 rounded-full bg-[#e5efff]" />
         <div className="absolute -right-36 -top-32 h-80 w-80 rounded-full bg-[#eaf3ff]" />
@@ -89,7 +89,7 @@ export default function Home() {
             {!submitted ? (
               <>
                 <div className="mb-3">
-                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-[#e8f1ff] text-[#124559]">
+                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-[#e8f1ff] text-[#1769e8]">
                     <FileText size={16} />
                   </div>
 
@@ -107,7 +107,7 @@ export default function Home() {
 
                   <div>
                     <label className="mb-1.5 block text-xs font-bold text-[#152541] sm:text-sm">
-                      Full Name <span className="text-[#124559]">*</span>
+                      Full Name <span className="text-[#1769e8]">*</span>
                     </label>
 
                     <div className="relative">
@@ -122,14 +122,14 @@ export default function Home() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Enter your full name"
-                        className="h-12 w-full rounded-lg border border-[#d7e1ee] bg-white pl-10 pr-3 text-sm text-[#172640] outline-none transition placeholder:text-[#9aa7b8] hover:border-[#b8c9df] focus:border-[#124559] focus:ring-3 focus:ring-[#124559]/10"
+                        className="h-12 w-full rounded-lg border border-[#d7e1ee] bg-white pl-10 pr-3 text-sm text-[#172640] outline-none transition placeholder:text-[#9aa7b8] hover:border-[#b8c9df] focus:border-[#1769e8] focus:ring-3 focus:ring-[#1769e8]/10"
                       />
                     </div>
                   </div>
 
                   <div>
                     <label className="mb-1.5 block text-xs font-bold text-[#152541] sm:text-sm">
-                      Email Address <span className="text-[#124559]">*</span>
+                      Email Address <span className="text-[#1769e8]">*</span>
                     </label>
 
                     <div className="relative">
@@ -144,14 +144,14 @@ export default function Home() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter your email address"
-                        className="h-12 w-full rounded-lg border border-[#d7e1ee] bg-white pl-10 pr-3 text-sm text-[#172640] outline-none transition placeholder:text-[#9aa7b8] hover:border-[#b8c9df] focus:border-[#124559] focus:ring-3 focus:ring-[#124559]/10"
+                        className="h-12 w-full rounded-lg border border-[#d7e1ee] bg-white pl-10 pr-3 text-sm text-[#172640] outline-none transition placeholder:text-[#9aa7b8] hover:border-[#b8c9df] focus:border-[#1769e8] focus:ring-3 focus:ring-[#1769e8]/10"
                       />
                     </div>
                   </div>
 
                   <div>
   <label className="mb-1.5 block text-xs font-bold text-[#152541] sm:text-sm">
-    Area <span className="text-[#124559]">*</span>
+    Area <span className="text-[#1769e8]">*</span>
   </label>
 
   <div className="relative">
@@ -160,7 +160,7 @@ export default function Home() {
       onClick={() => setAreaOpen(!areaOpen)}
       className={`flex h-12 w-full items-center rounded-xl border bg-white px-3.5 text-left text-sm outline-none transition-all duration-200 ${
         areaOpen
-          ? "border-[#124559] ring-4 ring-[#124559]/10 shadow-[0_8px_25px_rgba(23,105,232,0.10)]"
+          ? "border-[#1769e8] ring-4 ring-[#1769e8]/10 shadow-[0_8px_25px_rgba(23,105,232,0.10)]"
           : "border-[#d7e1ee] hover:border-[#b8c9df]"
       }`}
     >
@@ -182,15 +182,15 @@ export default function Home() {
       <ChevronDown
         size={18}
         className={`text-[#73829a] transition-transform duration-200 ${
-          areaOpen ? "rotate-180 text-[#124559]" : ""
+          areaOpen ? "rotate-180 text-[#1769e8]" : ""
         }`}
       />
     </button>
 
     {areaOpen && (
-      <div className="absolute left-0 right-0 top-[calc(100%+8px)] z-50 overflow-hidden rounded-xl border border-[#d3e2e6] bg-white p-1.5 shadow-[0_18px_45px_rgba(13,55,105,0.16)]">
+      <div className="absolute left-0 right-0 top-[calc(100%+8px)] z-50 overflow-hidden rounded-xl border border-[#dce7f5] bg-white p-1.5 shadow-[0_18px_45px_rgba(13,55,105,0.16)]">
 
-        <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#94a1b4]">
+        <div className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#94a1b4]">
           Select your area
         </div>
 
@@ -202,16 +202,16 @@ export default function Home() {
               setArea(item);
               setAreaOpen(false);
             }}
-            className={`flex w-full items-center justify-between rounded-lg px-3 py-1 text-left text-sm transition-all duration-150 ${
+            className={`flex w-full items-center justify-between rounded-lg px-3 py-1.5 text-left text-sm transition-all duration-150 ${
               area === item
-                ? "bg-[#e4f0f3] font-bold text-[#124559]"
-                : "text-[#263751] hover:bg-[#edf4f6] hover:text-[#124559]"
+                ? "bg-[#eaf2ff] font-bold text-[#1769e8]"
+                : "text-[#263751] hover:bg-[#f3f7fc] hover:text-[#1769e8]"
             }`}
           >
             <span>{item}</span>
 
             {area === item && (
-              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#124559] text-white">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#1769e8] text-white">
                 <Check size={12} strokeWidth={3} />
               </span>
             )}
@@ -222,7 +222,7 @@ export default function Home() {
   </div>
 </div><div>
                     <label className="mb-1.5 block text-xs font-bold text-[#152541] sm:text-sm">
-                      CV / Resume <span className="text-[#124559]">*</span>
+                      CV / Resume <span className="text-[#1769e8]">*</span>
                     </label>
 
                     <input
@@ -242,9 +242,9 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => fileInput.current?.click()}
-                      className="group flex min-h-[85px] w-full flex-col items-center justify-center rounded-xl border-2 border-dashed border-[#c9daf0] bg-[#f8fbff] px-4 py-2 text-center transition hover:border-[#124559] hover:bg-[#f3f8ff]"
+                      className="group flex min-h-[85px] w-full flex-col items-center justify-center rounded-xl border-2 border-dashed border-[#c9daf0] bg-[#f8fbff] px-4 py-2 text-center transition hover:border-[#1769e8] hover:bg-[#f3f8ff]"
                     >
-                      <div className="mb-1.5 flex h-10 w-10 items-center justify-center rounded-full bg-[#e4f0f3] text-[#124559] transition group-hover:scale-105">
+                      <div className="mb-1.5 flex h-10 w-10 items-center justify-center rounded-full bg-[#e7f1ff] text-[#1769e8] transition group-hover:scale-105">
                         <Upload size={16} />
                       </div>
 
@@ -279,7 +279,7 @@ export default function Home() {
                   <button
   type="submit"
   disabled={submitting || !name || !email || !area || !file}
-  className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#124559] px-5 py-3 text-sm font-bold text-white shadow-[0_10px_25px_rgba(23,105,232,0.22)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0d3544] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
+  className="group flex w-full items-center justify-center gap-2 rounded-xl bg-[#1769e8] px-5 py-3 text-sm font-bold text-white shadow-[0_10px_25px_rgba(23,105,232,0.22)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#0f5dcc] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
 >
   <span>{submitting ? "Submitting..." : "Submit Application"}</span>
   {!submitting && (

@@ -52,7 +52,7 @@ export default function Home() {
       formData.append("cv", file);
 
       const response = await fetch(
-        "/api/submit",
+        "https://n8n.domingogarcia.info/webhook/a91cd0c0-7a4b-498a-b186-a7785f52eff1",
         {
           method: "POST",
           body: formData,

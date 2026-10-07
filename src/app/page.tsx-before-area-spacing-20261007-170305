@@ -52,7 +52,7 @@ export default function Home() {
       formData.append("cv", file);
 
       const response = await fetch(
-        "/api/submit",
+        "https://n8n.domingogarcia.info/webhook/a91cd0c0-7a4b-498a-b186-a7785f52eff1",
         {
           method: "POST",
           body: formData,
@@ -190,7 +190,7 @@ export default function Home() {
     {areaOpen && (
       <div className="absolute left-0 right-0 top-[calc(100%+8px)] z-50 overflow-hidden rounded-xl border border-[#d3e2e6] bg-white p-1.5 shadow-[0_18px_45px_rgba(13,55,105,0.16)]">
 
-        <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[#94a1b4]">
+        <div className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-[#94a1b4]">
           Select your area
         </div>
 
@@ -202,7 +202,7 @@ export default function Home() {
               setArea(item);
               setAreaOpen(false);
             }}
-            className={`flex w-full items-center justify-between rounded-lg px-3 py-1 text-left text-sm transition-all duration-150 ${
+            className={`flex w-full items-center justify-between rounded-lg px-3 py-1.5 text-left text-sm transition-all duration-150 ${
               area === item
                 ? "bg-[#e4f0f3] font-bold text-[#124559]"
                 : "text-[#263751] hover:bg-[#edf4f6] hover:text-[#124559]"
