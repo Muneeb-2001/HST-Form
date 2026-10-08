@@ -290,11 +290,17 @@ export default function Home() {
               </>
             ) : (
               <div className="flex min-h-[400px] flex-col items-center justify-center text-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#e9f8ef] text-[#20a15a]">
-                  <CheckCircle2 size={30} />
+                <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-[#124559]/10 text-[#124559] shadow-[0_8px_30px_rgba(18,69,89,0.16)]">
+                  <div className="absolute inset-2 flex items-center justify-center rounded-full bg-[#124559] text-white shadow-[0_6px_18px_rgba(18,69,89,0.28)]">
+                    <CheckCircle2 size={38} strokeWidth={2.4} />
+                  </div>
+                  <span className="absolute -right-1 top-1 text-[#124559] text-lg">✦</span>
+                  <span className="absolute -left-2 top-5 text-[#7fb3c4] text-sm">✦</span>
+                  <span className="absolute -right-2 bottom-3 text-[#7fb3c4] text-sm">✦</span>
+                  <span className="absolute -left-1 bottom-0 text-[#124559] text-xs">✦</span>
                 </div>
 
-                <h2 className="mt-5 text-2xl font-extrabold">
+                <h2 className="mt-6 text-3xl font-extrabold tracking-tight text-[#124559]">
                   Application Submitted
                 </h2>
 
@@ -303,19 +309,14 @@ export default function Home() {
                   successfully.
                 </p>
 
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSubmitted(false);
-                    setName("");
-                    setEmail("");
-                    setArea("");
-                    setFile(null);
-                  }}
-                  className="mt-6 rounded-lg border border-[#d7e1ee] bg-white px-5 py-2.5 text-sm font-bold text-[#172640] transition hover:bg-[#f5f8fc]"
-                >
-                  Submit Another Application
-                </button>
+                                <div className="relative mt-7 inline-flex items-center gap-3 overflow-hidden rounded-full border border-[#124559]/15 bg-[#124559]/5 px-6 py-3 text-sm font-bold text-[#124559] shadow-[0_8px_24px_rgba(18,69,89,0.12)]">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#124559] text-white shadow-sm">
+                    <CheckCircle2 size={17} strokeWidth={2.7} />
+                  </span>
+                  <span>Application successfully received</span>
+                  <span className="absolute -right-1 top-0 text-[#7fb3c4] text-xs">✦</span>
+                  <span className="absolute -left-1 bottom-0 text-[#124559]/40 text-xs">✦</span>
+                </div>
               </div>
             )}
 
@@ -325,3 +326,5 @@ export default function Home() {
     </main>
   );
 }
+
+
